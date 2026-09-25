@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+/*
+  Identidade visual do site.
+  As cores fazem referência discreta à bandeira da Bahia (azul, branco, vermelho),
+  sobre um fundo claro, como papel de jornal.
+  Cada cor definida aqui vira uma classe do Tailwind:
+  --color-azul  ->  text-azul, bg-azul, border-azul...
+*/
+@theme {
+  --color-papel: #f6f4ef; /* fundo da página */
+  --color-superficie: #ffffff; /* fundo de tabelas e caixas */
+  --color-tinta: #16191f; /* texto principal */
+  --color-tinta-suave: #5b6170; /* texto secundário */
+  --color-linha: #dcd8cf; /* bordas e divisórias */
+  --color-azul: #1f4e8c;
+  --color-azul-escuro: #163a69;
+  --color-vermelho: #b8232f;
+
+  --font-sans: var(--font-geist-sans);
+  --font-serif: var(--font-source-serif);
+}
+
+body {
+  background: var(--color-papel);
+  color: var(--color-tinta);
+}
+
+/* Contorno visível ao navegar pelo teclado (acessibilidade) */
+:focus-visible {
+  outline: 2px solid var(--color-azul);
+  outline-offset: 2px;
+}
